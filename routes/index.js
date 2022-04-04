@@ -1,6 +1,6 @@
-import express from 'express';
 import { scrape } from '../scrapper/main.js';
 const router = express.Router();
+import express from 'express';
 
 router.get('/', async (req, res, next) => {
   const { per_page = 3 } = req.query;
