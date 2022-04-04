@@ -5,7 +5,8 @@ export const createPostBody = () => ({
   title: '',
   content: {},
   description: '',
-  fully_parsed: false,
+  rawContentText: '',
+  is_fully_parsed: false,
   available_vacancies: 1,
 });
 
@@ -65,5 +66,14 @@ export const parseRawContent = (content) => {
     result.positions = positions;
   }
 
-  return [result, Object.keys(result) !== 0];
+  const isFullyParsed = Object.keys(result) !== 0;
+  body.querySelector('style')?.remove();
+  body.querySelector('.hidedesktop')?.remove();
+
+  const text = body.textContent.trim();
+  const rawContentText = text
+    .split('\n')
+    .filter((line) => /\S/.test(line))
+    .join('\n');
+  return [result, isFullyParsed, rawContentText];
 };
