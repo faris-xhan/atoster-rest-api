@@ -1,10 +1,10 @@
 import cookieParser from 'cookie-parser';
 import indexRouter from './routes/index.js';
+import { config } from 'dotenv';
 import mongoose from 'mongoose';
 import express from 'express';
 import logger from 'morgan';
 import path from 'path';
-import { config } from 'dotenv';
 
 // Load Envi
 config();
