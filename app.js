@@ -1,4 +1,5 @@
 import jobBoxRouter from './routes/JobBox/router.js';
+import jobsPkRouter from './routes/JobsPk/router.js';
 import indexRouter from './routes/index.js';
 import cookieParser from 'cookie-parser';
 import { config } from 'dotenv';
@@ -21,5 +22,6 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/', indexRouter);
 app.use('/jobbox', jobBoxRouter);
+app.use('/jobspk', jobsPkRouter);
 
 export default app;
