@@ -1,5 +1,5 @@
+import scrapper from './jobsPk.scrapper.js';
 import express from 'express';
-import scrapper from './scrapper.js';
 
 const router = express.Router();
 

@@ -1,4 +1,5 @@
-import { createPostBody, getUrl, parseRawContent } from './helpers.js';
+import { getUrl, parseRawContent } from './jobox.helpers.js';
+import { createPostBody } from '../../helpers.js';
 import axios from 'axios';
 
 const scrape = async (after) => {
@@ -9,6 +10,7 @@ const scrape = async (after) => {
   const posts = [];
   results.forEach((result) => {
     const post = createPostBody();
+
     post.postId = result.id;
     post.postedOn = result.date;
     post.title = result.title.rendered;
@@ -31,5 +33,4 @@ const scrape = async (after) => {
 
 export default {
   getPosts: scrape,
-  name: 'job-box',
 };

@@ -1,16 +1,5 @@
 import { JSDOM } from 'jsdom';
 
-export const createPostBody = () => ({
-  image: '',
-  title: '',
-  postId: '',
-  content: {},
-  postedOn: '',
-  description: '',
-  rawContentText: '',
-  is_fully_parsed: false,
-});
-
 export const getUrl = (after) => {
   const url = new URL('https://jobsbox.pk/wp-json/wp/v2/posts');
   const params = [
