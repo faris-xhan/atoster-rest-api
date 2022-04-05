@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <menta
+      name="description"
+      content="A rest api that scrape jobs from other posts and returns it"
+    />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+    <title>Atoster</title>
+    <style>
+      *,
+      *::after,
+      *::before {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        max-width: 900px;
+      }
+
+      th,
+      td,
+      tr {
+        border: 1px solid black;
+        padding: 1rem;
+      }
+
+      h1 {
+        padding: 1rem;
+        text-align: center;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Atoster</h1>
+      <section>
+        <table>
+          <thead>
+            <tr>
+              <th>Endpoing</th>
+              <th>Params</th>
+              <th>Method</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>/</td>
+              <td>
+                jobsBoxAfter=Year-Month-DateTHour:Minute:Second
+                (2022-04-05T12:38:14) or
+                jobsPkAfter=Year-Month-DateTHour:Minute:Second
+                (2022-04-05T12:38:14)
+              </td>
+              <td>Get</td>
+            </tr>
+            <tr>
+              <td>/jobsbox</td>
+              <td>
+                after=Year-Month-DateTHour:Minute:Second (2022-04-05T12:38:14)
+              </td>
+              <td>Get</td>
+            </tr>
+            <tr>
+              <td>/jobsPk</td>
+              <td>
+                after=Year-Month-DateTHour:Minute:Second (2022-04-05T12:38:14)
+              </td>
+              <td>Get</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
+  </body>
+</html>
