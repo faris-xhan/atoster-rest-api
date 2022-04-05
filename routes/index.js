@@ -7,7 +7,7 @@ router.get('/', async (req, res, next) => {
   const { per_page = 3 } = req.query;
 
   try {
-    const { posts, url, ids } = await scrape(per_page);
+    const { posts, url } = await scrape(per_page);
 
     return res.json({
       posts,
@@ -15,7 +15,6 @@ router.get('/', async (req, res, next) => {
         count: posts.length,
         per_page,
         url,
-        ids,
       },
     });
   } catch (error) {

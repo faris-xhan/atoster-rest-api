@@ -4,6 +4,7 @@ export const createPostBody = () => ({
   image: '',
   title: '',
   content: {},
+  postId: '',
   description: '',
   rawContentText: '',
   is_fully_parsed: false,
@@ -75,5 +76,6 @@ export const parseRawContent = (content) => {
     .split('\n')
     .filter((line) => /\S/.test(line))
     .join('\n');
+
   return [result, isFullyParsed, rawContentText];
 };

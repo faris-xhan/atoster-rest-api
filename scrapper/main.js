@@ -18,6 +18,7 @@ const scrape = async (per_page) => {
       return;
     }
     const post = createPostBody();
+    post.postId = result.id;
     post.title = result.title.rendered;
     post.image = result.yoast_head_json.og_image?.[0]?.url;
     post.description = result.yoast_head_json.og_description;
@@ -29,13 +30,11 @@ const scrape = async (per_page) => {
     post.is_fully_parsed = is_fp;
 
     posts.push(post);
-    postsIds.push(result.id);
   });
 
   return {
     posts,
     url,
-    ids: postsIds,
   };
 };
 
