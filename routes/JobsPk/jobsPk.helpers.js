@@ -4,6 +4,7 @@ export const getUrl = (after) => {
   const url = new URL('https://jobs.com.pk/wp-json/wp/v2/posts');
   const params = ['id', 'title', 'content', 'date'];
 
+  url.searchParams.set('orderBy', 'date');
   url.searchParams.set('_fields', params.join(','));
   if (after) {
     url.searchParams.set('after', after);

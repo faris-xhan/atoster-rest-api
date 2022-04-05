@@ -11,6 +11,7 @@ export const getUrl = (after) => {
     'yoast_head_json.og_description',
   ];
 
+  url.searchParams.set('orderBy', 'date');
   url.searchParams.set('_fields', params.join(','));
   if (after) {
     url.searchParams.set('after', after);
