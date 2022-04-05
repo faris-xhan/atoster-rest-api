@@ -1,3 +1,4 @@
+import scrapeRouter from './routes/scrapper/scrapper.js';
 import indexRouter from './routes/index.js';
 import cookieParser from 'cookie-parser';
 import mongoose from 'mongoose';
@@ -28,5 +29,6 @@ app.use(express.static(PUBLIC_DIRECTORY));
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/', indexRouter);
+app.use('/scrapper', scrapeRouter);
 
 export default app;
