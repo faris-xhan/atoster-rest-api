@@ -5,13 +5,15 @@
   "type": "module",
   "scripts": {
     "start": "node ./bin/server.js",
-    "dev": "DEBUG=server:* nodemon ./bin/server.js"
+    "dev": "DEBUG=server:* nodemon ./bin/server.js",
+    "db": "mongod --dbpath=$HOME/data"
   },
   "dependencies": {
     "cookie-parser": "~1.4.6",
     "debug": "~4.3.4",
     "dotenv": "^16.0.0",
     "express": "~4.17.3",
+    "mongoose": "^6.2.10",
     "morgan": "~1.10.0"
   },
   "devDependencies": {
