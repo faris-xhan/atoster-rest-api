@@ -31,4 +31,5 @@ const scrape = async (after) => {
 
 export default {
   getPosts: scrape,
+  name: 'job-box',
 };

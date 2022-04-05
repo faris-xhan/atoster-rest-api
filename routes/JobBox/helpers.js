@@ -17,12 +17,15 @@ export const getUrl = (after) => {
     'id',
     'title',
     'content',
+    'date',
     'yoast_head_json.og_image',
     'yoast_head_json.og_description',
   ];
 
   url.searchParams.set('_fields', params.join(','));
-  url.searchParams.set('after', after);
+  if (after) {
+    url.searchParams.set('after', after);
+  }
 
   return url.href;
 };
