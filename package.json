@@ -1,5 +1,15 @@
 {
   "name": "server",
+  "description": "A rest api that scrape jobs from other posts and returns it",
+  "author": {
+    "name": "Mohammad Naeem",
+    "url": "http://github.com/i-naeem"
+  },
+  "keywords": [
+    "rest-api",
+    "web-scraping",
+    "crawling"
+  ],
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -19,5 +29,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
+  },
+  "engines": {
+    "node": "v17.4.0"
   }
 }
