@@ -20,8 +20,8 @@ app.use(cookieParser());
 app.use(express.static(PUBLIC_DIRECTORY));
 app.use(express.urlencoded({ extended: false }));
 
-app.use('/', indexRouter);
-app.use('/jobbox', jobBoxRouter);
-app.use('/jobspk', jobsPkRouter);
+app.use('/api', indexRouter);
+app.use('/api/jobbox', jobBoxRouter);
+app.use('/api/jobspk', jobsPkRouter);
 
 export default app;
