@@ -1,4 +1,4 @@
-import scrapeRouter from './routes/scrape/scrapeRouter.js';
+import scrapeRouter from './routes/scrape/scrape.js';
 import indexRouter from './routes/index.js';
 import cookieParser from 'cookie-parser';
 import mongoose from 'mongoose';
