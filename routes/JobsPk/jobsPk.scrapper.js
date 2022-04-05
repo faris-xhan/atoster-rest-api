@@ -30,6 +30,7 @@ const getPosts = async (after) => {
     posts,
     url,
     name: 'jobspk',
+    count: posts.length,
   };
 };
 

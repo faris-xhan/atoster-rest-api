@@ -5,9 +5,10 @@ import jobsPkScapper from './JobsPk/jobsPk.scrapper.js';
 const router = express.Router();
 
 router.get('/', async (req, res, next) => {
+  const { jobsBoxAfter, jobsPkAfter } = req.query;
   const promises = Promise.all([
-    jobsBoxScrapper.getPosts(),
-    jobsPkScapper.getPosts(),
+    jobsBoxScrapper.getPosts(jobsBoxAfter),
+    jobsPkScapper.getPosts(jobsPkAfter),
   ]);
 
   promises
@@ -17,7 +18,7 @@ router.get('/', async (req, res, next) => {
       });
     })
     .catch((err) => {
-      return next(error);
+      return next(err);
     });
 });
 

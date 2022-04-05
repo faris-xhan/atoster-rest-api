@@ -29,6 +29,7 @@ const scrape = async (after) => {
     posts,
     url,
     name: 'jobsbox',
+    count: posts.length,
   };
 };
 
