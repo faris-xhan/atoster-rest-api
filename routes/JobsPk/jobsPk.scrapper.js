@@ -29,6 +29,7 @@ const getPosts = async (after) => {
   return {
     posts,
     url,
+    name: 'jobspk',
   };
 };
 

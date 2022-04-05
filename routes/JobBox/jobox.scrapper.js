@@ -28,6 +28,7 @@ const scrape = async (after) => {
   return {
     posts,
     url,
+    name: 'jobsbox',
   };
 };
 
