@@ -4,11 +4,11 @@ import express from 'express';
 const router = express.Router();
 
 router.get('/', async (req, res, next) => {
-  const { after = '2022-03-28T12:59:55' } = req.query;
+  const { after } = req.query;
 
   try {
     const { posts, url } = await scrapper.getPosts(after);
-    return res.json({ posts, meta: { url } });
+    return res.json({ posts, meta: { url, count: posts.length } });
   } catch (error) {
     next(error);
   }
